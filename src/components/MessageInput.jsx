@@ -48,5 +48,6 @@ const MessageInput = ({ addNote }) => {
         </div>
     );
 };
+localStorage.clear();
 
 export default MessageInput;

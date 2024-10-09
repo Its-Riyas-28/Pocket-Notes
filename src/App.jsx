@@ -1,6 +1,7 @@
 import React from 'react'; 
 import Sidebar from './components/Sidebar'; 
 import ChatWindow from './components/ChatWindow'; 
+import FrontPage from './components/FrontPage'; // Import your new FrontPage component
 
 const App = () => {
     const [noteGroups, setNoteGroups] = React.useState(() => {
@@ -33,12 +34,13 @@ const App = () => {
     return (
         <div className="app-container">
             <Sidebar noteGroups={noteGroups} addNoteGroup={addNoteGroup} onGroupSelect={handleGroupSelect} />
-            {selectedGroup && (
+            {selectedGroup ? (
                 <ChatWindow notes={notes} addNote={addNote} groupName={selectedGroup.name} groupColor={selectedGroup.color} />
+            ) : (
+                <FrontPage /> // Show the FrontPage component when no group is selected
             )}
         </div>
     );
 };
-
 
 export default App;

@@ -1,0 +1,52 @@
+.front-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: #DAE5F5; 
+    color: #000000;
+    text-align: center; 
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh; /* Make the page take full height of the screen */
+    position: relative; /* Ensure we can absolutely position the bottom text */
+}
+
+.front-image {
+    width: 300px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 20px; /* Adds space between image and text */
+}
+
+.text-container { 
+ /* Push the content up slightly */
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px; 
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.2em; 
+    margin: 10px 0; 
+    font-weight: 500;
+}
+
+.encrypted-text {
+    display: flex;
+    align-items: center; /* Center the icon and text vertically */
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 20px; /* Position at the bottom of the page */
+    left: 50%; /* Move to the center horizontally */
+    transform: translateX(-50%); /* Adjust for true center alignment */
+    text-align: center;
+}
+
+.lock-icon {
+    margin-right: 5px; /* Small space between the icon and text */
+    width: 20px; /* Adjust icon size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
